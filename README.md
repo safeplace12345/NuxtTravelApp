@@ -41,3 +41,4 @@ npm run preview
 # Deployment 
 
 Application has been deployed on the address below: 
+Api has been deployed on the address below: https://travelersapi.adaptable.app/graphql

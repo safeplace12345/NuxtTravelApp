@@ -19,3 +19,8 @@ export const useCurrentUser = () => useState<any>('user', () => ({
     email: "",
     name: ""
 }))
+
+export const useCart = () => useState<any>('cart', () => ({
+    email: "",
+    orders: []
+}))

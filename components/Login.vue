@@ -1,3 +1,25 @@
+<script setup>
+const currentUser = useCurrentUser();
+const router = useRouter();
+
+const email = ref();
+const name = ref();
+
+defineProps({
+  isLogin: Boolean,
+});
+
+const login = async (e) => {
+  e.preventDefault();
+  const data = await getUser(email.value);
+  if (!data) {
+    currentUser.value.email = email.value;
+  } else {
+    currentUser.value = data.user;
+  }
+  return router.push("/home");
+};
+</script>
 <template>
   <form v-if="isLogin">
     <div class="form-group">
